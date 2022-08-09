@@ -1,0 +1,72 @@
+一、选择题
+1.在JSP中，只有一行代码：<%=’A’+’B’%>，运行将输出（ C ）。
+A.  A+B			B.  AB
+C.  131			D.  错误信息，因为表达式是错误的
+
+2. 在JSP中使用<jsp:getProperty>标记时，不会出现的属性是：（ B ）
+A.   name     		B.   value     
+C.   property       	D.   以上皆不会出现
+
+3. 给定一个JSP程序源码如下：
+<jsp:include page = “two.jsp” >
+<jsp:param name = “location”  value = “beijing”/>
+</jsp:include>
+在two.jsp中加入（ D  ）代码片断可以输出参数location的值。 
+A.	<jsp:getParam name = “location”>  	   
+B. <jsp:getParameter name = “location”>
+C. <% = request.getAttribute(“location”)%>  
+D. <% = request.getParameter(“location”)%>
+
+4. 给定JSP程序源码如下，该JSP运行后输出的结果是（  D）。   
+<html>
+  <% int count =1;%> Count: <% ++count; %>
+</html>
+A.  Count:1					B. Count:2
+C.  1:2						D.  Count:
+
+5. 在JSP中，使用<jsp:useBean>动作可以将javaBean嵌入JSP页面，对JavaBean的访问范围不能是（ C ）。 
+A.	page				B.	request
+C.	response			D.	application
+
+6. 在JSP中，以下不是JSP隐式对象的是（  A ）。
+A)  context		B)  request
+C)  application		D)  out
+
+7. 在JSP中，page指令的（  B ）属性用来引入需要的包或类。
+A)   extends			B)   import
+C)   languge			D)   contentType
+
+8. 某JSP程序中声明使用javaBean的语句如下:
+<jsp:useBean id=”ur” class=”mypackage.User” scope=”page”/>
+要取出该javaBean的loginName属性值,以下语句正确的是(  C  ).	
+A)	<%=ur.getLoginName()%>
+B)	<%=ur.getProperty(“loginName”)%>
+C)	<jsp:getProperty name=”user” property=”loginName"/>
+D)	<jsp:getProperty id=”user’ property=”loginName”/>
+
+
+9. 在JSP中，重定向到另一个页面，以下（ C ）语句是正确的。   
+A)	request.sendRedirect("http://www.njnu.edu.cn");
+B)	request.sendRedirect();
+C)	response.sendRedirect("http://www.njnu.edu.cn ");
+D)	response.sendRedirect();
+
+
+10. 给定JSP程序源码如下：
+<html>
+	<% int count =1;%> _______
+</html>	
+以下（  D  ）语句可以在下划线处插入，并且运行后输出结果是：1。	A)  <%=++count %>			B) <% ++count; %>
+C)  <% count++; %> 		D) <% =count++ %>
+
+二、什么是JavaBean?使用JavaBean的优点是什么？
+	JavaBean是特殊的Java类，遵守JavaBean API规范。
+	JavaBean将组件技术引入Java编程领域，每个JavaBean采用Java语言实现特定的功能，具
+有独立性、可重用性、跨平台可视化开发等特点。应用不同的JavaBean可以快速构造一个新的应用程序。
+JavaBean技术为开发人员提供了高效的应用系统解决方案，
+三、JavaBean有哪几种属性？在JSP中比较常用的是哪个属性？
+	JavaBean的属性分为四种：简单属性、索引属性、绑定属性和约束属性。
+	JSP中常用的是简单属性
+四、编写JavaBean的时候，应注意哪些？  
+	一个标准的JavaBean需要符合以下规范：实现Java.io.Serializable接口；是一个公共类；
+类中必须包含无参构造函数；提供对属性访问的set和get函数

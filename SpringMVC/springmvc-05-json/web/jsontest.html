@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试json</title>
+</head>
+<body>
+<script type="text/javascript">
+    var user={
+        name:"洛克昂",
+        age:20,
+        sex:"男"
+    };
+    var json=JSON.stringify(user);
+    console.log(json);
+
+    console.log("===============");
+    var user1 = JSON.parse(json);
+    console.log(user1);
+    console.log("===============");
+    console.log(user);
+</script>
+</body>
+</html>
